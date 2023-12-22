@@ -1,0 +1,21 @@
+.btn {
+  user-select: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1890ff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.btn:active {
+  color: #fff;
+  background-color: #096dd9;
+  border-color: #096dd9;
+}

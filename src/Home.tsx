@@ -7,7 +7,7 @@ export const Home: React.FC = () => {
 
   return (
     <div>
-      <p style={{ color: 'red' }}>{count}</p>
+      <p style={{ color: 'red' }}>count: {count}</p>
       <div className={styles.btnWrapper}>
         <Button
           text="Increment"

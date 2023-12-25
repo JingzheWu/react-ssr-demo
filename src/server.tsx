@@ -11,8 +11,10 @@ const htmlPath = path.resolve(clientDistDir, 'index.html');
 const app = express();
 
 app.get('/', (req, res) => {
+  // 读取 dist/client/index.html 文件
   const html = fs.readFileSync(htmlPath, 'utf-8');
   const app = ReactDOMServer.renderToString(<Home />);
+  // 将渲染后的 React HTML 插入到 div#root 中
   const finalHtml = html.replace(
     '<div id="root"></div>',
     `<div id="root">${app}</div>`
@@ -20,6 +22,7 @@ app.get('/', (req, res) => {
   res.send(finalHtml);
 });
 
+// 提供静态资源访问服务
 app.use(express.static(clientDistDir));
 
 const PORT = process.env.PORT || 3007;

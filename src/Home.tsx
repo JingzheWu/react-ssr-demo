@@ -12,12 +12,12 @@ export const Home: React.FC = () => {
         <Button
           text="Increment"
           className={styles.btn}
-          onClick={() => setCount(count + 1)}
+          onClick={() => setCount(prev => prev + 1)}
         />
         <Button
           text="Decrement"
           className={styles.btn}
-          onClick={() => setCount(count - 1)}
+          onClick={() => setCount(prev => prev - 1)}
         />
         <Button
           text="Reset"
